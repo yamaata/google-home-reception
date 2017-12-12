@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: ./docker
+    container_name: 'google-home-reception'
+    ports:
+     - '1080:3000'
+    volumes:
+     - ./:/www/google-home-reception
