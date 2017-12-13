@@ -50,6 +50,9 @@ In order to run the application you will need to copy environment file and set t
 * TO
 * BASE_URL
 
+Then, start awesome application!!  
+`npm run start` or `yarn run start`
+
 ## Contribution
 Contributions are welcome and generally accepted.
 
