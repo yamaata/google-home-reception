@@ -3,6 +3,7 @@ services:
   web:
     build: ./docker
     container_name: 'google-home-reception'
+    network_mode: host
     ports:
      - '1080:3000'
     volumes:

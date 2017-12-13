@@ -5,6 +5,11 @@ FROM node:9.2.1
 LABEL vendor="KDDI Web Communications inc." \
     maintainer="yuto.yamada@kddi-web.com"
 
+# required library
+RUN apt-get update && apt-get install -y \
+	libavahi-compat-libdnssd-dev \
+	--no-install-recommends && rm -rf /var/lib/apt/lists/*
+
 # yarn
 RUN apt-get update && apt-get install -y \
     apt-transport-https \

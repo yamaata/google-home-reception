@@ -5,9 +5,9 @@ const DialogflowApp = require('actions-on-google').DialogflowApp;
 const router = express.Router();
 
 router.post('/', (req, res, next) => {
-  const welcome = require('../services/welcome.js');
-  const receive = require('../services/recieve.js');
-  const bye = require('../services/bye.js');
+  const welcome = require('../services/welcome');
+  const receive = require('../services/recieve');
+  const bye = require('../services/bye');
 
   const app = new DialogflowApp({request: req, response: res});
 

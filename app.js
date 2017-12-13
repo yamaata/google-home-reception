@@ -8,8 +8,12 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
+const twiml = require('./routes/twiml');
 
 const app = express();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -17,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/twiml', twiml);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
